@@ -4,7 +4,7 @@ namespace softire.api
 {  
     public class SnNeumaticosDetQuery : ObjectGraphType  
     {  
-        public SnNeumaticosDetQuery(ISnNeumaticosDetRepository snNeumaticosDetRepository)  
+        public SnNeumaticosDetQuery(ISnNeumaticosDetRepository snNeumaticosDetRepository,ISnVehiculoRepository snVehiculoRepository)  
         //snNeumaticosDetR.. ??
         {  
             Field<ListGraphType<SnNeumaticosDetType>>(  
@@ -35,6 +35,10 @@ namespace softire.api
                     var id = context.GetArgument<string>("id");
                     return snNeumaticosDetRepository.GetNeumaticosDetById(id);
                 }
+            );
+            Field<ListGraphType<SnVehiculoType>>(
+                "vehiculo",
+                resolve: context => snVehiculoRepository.GetVehiculoAll()
             );
         }  
     }  

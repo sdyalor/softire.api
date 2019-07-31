@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/root/softire.api/softire.api.csproj": {}
+    "/home/ubuntu/softire.api/softire.api.csproj": {}
   },
   "projects": {
-    "/root/softire.api/softire.api.csproj": {
+    "/home/ubuntu/softire.api/softire.api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/root/softire.api/softire.api.csproj",
+        "projectUniqueName": "/home/ubuntu/softire.api/softire.api.csproj",
         "projectName": "softire.api",
-        "projectPath": "/root/softire.api/softire.api.csproj",
-        "packagesPath": "/root/.nuget/packages/",
-        "outputPath": "/root/softire.api/obj/",
+        "projectPath": "/home/ubuntu/softire.api/softire.api.csproj",
+        "packagesPath": "/home/ubuntu/.nuget/packages/",
+        "outputPath": "/home/ubuntu/softire.api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/root/.nuget/NuGet/NuGet.Config"
+          "/home/ubuntu/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
@@ -62,7 +62,7 @@
               "include": "None",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.0.0-preview6-27804-01, )",
+              "version": "[3.0.0-preview7-27912-14, )",
               "autoReferenced": true
             }
           },
