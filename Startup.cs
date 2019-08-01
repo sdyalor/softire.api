@@ -40,6 +40,7 @@ namespace softire.api
             services.AddDbContext<NeumaticosContext>();
             services.AddScoped<ISnNeumaticosDetRepository, SnNeumaticosDetRepository>();  
             services.AddScoped<ISnVehiculoRepository, SnVehiculoRepository>();  
+            services.AddScoped<ISnMarcaVehiculoRepository, SnMarcaVehiculoRepository>();  
             //GraphQL configuration  
             services.AddScoped<IDependencyResolver>(s => new FuncDependencyResolver(s.GetRequiredService));  
             services.AddScoped<SnNeumaticosDetSchema>();  
