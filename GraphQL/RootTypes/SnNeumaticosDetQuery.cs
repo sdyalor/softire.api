@@ -4,7 +4,7 @@ namespace softire.api
 {  
     public class SnNeumaticosDetQuery : ObjectGraphType  
     {  
-        public SnNeumaticosDetQuery(ISnNeumaticosDetRepository snNeumaticosDetRepository,ISnVehiculoRepository snVehiculoRepository, ISnMarcaVehiculoRepository snMarcaVehiculoRepository)  
+        public SnNeumaticosDetQuery(ISnNeumaticosDetRepository snNeumaticosDetRepository,ISnVehiculoRepository snVehiculoRepository, ISnMarcaVehiculoRepository snMarcaVehiculoRepository, ISnModeloVehiculoRepository snModeloVehiculoRepository,ISnTipoVehiculoRepository snTipoVehiculoRepository)  
         //snNeumaticosDetR.. ??
         {  
             Field<ListGraphType<SnNeumaticosDetType>>(  
@@ -43,6 +43,14 @@ namespace softire.api
             Field<ListGraphType<SnMarcaVehiculoType>>(
                 "marca",
                 resolve: context => snMarcaVehiculoRepository.GetMarcaVehiculoAll()
+            );
+            Field<ListGraphType<SnModeloVehiculoType>>(
+                "modelo",
+                resolve: context => snModeloVehiculoRepository.GetModeloVehiculoAll()
+            );
+            Field<ListGraphType<SnTipoVehiculoType>>(
+                "tipo",
+                resolve: context => snTipoVehiculoRepository.GetTipoVehiculoAll()
             );
         }  
     }  
