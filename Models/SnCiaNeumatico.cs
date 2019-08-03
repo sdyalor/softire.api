@@ -7,6 +7,7 @@ namespace softire.api.Models
     {
         public SnCiaNeumatico()
         {
+            SnCondicionesNeumatico = new HashSet<SnCondicionesNeumatico>();
             SnConfiguracion = new HashSet<SnConfiguracion>();
             SnDisenosNeumatico = new HashSet<SnDisenosNeumatico>();
             SnMarcaNeumatico = new HashSet<SnMarcaNeumatico>();
@@ -30,6 +31,7 @@ namespace softire.api.Models
         public DateTime Fecha { get; set; }
         public string Usuario { get; set; }
 
+        public virtual ICollection<SnCondicionesNeumatico> SnCondicionesNeumatico { get; set; }
         public virtual ICollection<SnConfiguracion> SnConfiguracion { get; set; }
         public virtual ICollection<SnDisenosNeumatico> SnDisenosNeumatico { get; set; }
         public virtual ICollection<SnMarcaNeumatico> SnMarcaNeumatico { get; set; }

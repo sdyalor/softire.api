@@ -62,7 +62,7 @@
               "include": "None",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.0.0-preview7-27912-14, )",
+              "version": "[3.0.0-preview6-27804-01, )",
               "autoReferenced": true
             }
           },

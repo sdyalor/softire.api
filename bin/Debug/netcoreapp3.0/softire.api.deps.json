@@ -29,7 +29,7 @@
           "GraphQL.Server.Ui.Playground": "3.5.0-alpha0014",
           "Microsoft.EntityFrameworkCore.Design": "3.0.0-preview6.19304.10",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.0.0-preview6.19304.10",
-          "Microsoft.NETCore.App": "3.0.0-preview7-27912-14",
+          "Microsoft.NETCore.App": "3.0.0-preview6-27804-01",
           "Microsoft.AspNetCore.Antiforgery": "3.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.0.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.0.0.0",
@@ -237,8 +237,8 @@
           "System.Reflection.DispatchProxy": "4.0.5.0",
           "System.Reflection.Reference": "4.2.1.0",
           "System.Reflection.Emit.Reference": "4.1.1.0",
-          "System.Reflection.Emit.ILGeneration.Reference": "4.1.0.0",
-          "System.Reflection.Emit.Lightweight.Reference": "4.1.0.0",
+          "System.Reflection.Emit.ILGeneration.Reference": "4.0.3.0",
+          "System.Reflection.Emit.Lightweight.Reference": "4.0.3.0",
           "System.Reflection.Extensions.Reference": "4.1.1.0",
           "System.Reflection.Metadata": "1.4.4.0",
           "System.Reflection.Primitives.Reference": "4.1.1.0",
@@ -278,7 +278,6 @@
           "System.Security.SecureString": "4.1.1.0",
           "System.ServiceModel.Web": "4.0.0.0",
           "System.ServiceProcess": "4.0.0.0",
-          "System.Text.Encoding.CodePages.Reference": "4.1.2.0",
           "System.Text.Encoding.Reference": "4.1.1.0",
           "System.Text.Encoding.Extensions": "4.1.1.0",
           "System.Text.Encodings.Web.Reference": "4.0.4.0",
@@ -540,6 +539,9 @@
       "Microsoft.Extensions.Caching.Abstractions/3.0.0-preview6.19304.6": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "3.0.0-preview6.19304.6"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.dll": {}
         }
       },
       "Microsoft.Extensions.Caching.Memory/3.0.0-preview6.19304.6": {
@@ -548,29 +550,48 @@
           "Microsoft.Extensions.DependencyInjection.Abstractions": "3.0.0-preview6.19304.6",
           "Microsoft.Extensions.Logging.Abstractions": "3.0.0-preview6.19304.6",
           "Microsoft.Extensions.Options": "3.0.0-preview6.19304.6"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Caching.Memory.dll": {}
         }
       },
       "Microsoft.Extensions.Configuration/3.0.0-preview6.19304.6": {
         "dependencies": {
           "Microsoft.Extensions.Configuration.Abstractions": "3.0.0-preview6.19304.6"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {}
         }
       },
       "Microsoft.Extensions.Configuration.Abstractions/3.0.0-preview6.19304.6": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "3.0.0-preview6.19304.6"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
         }
       },
       "Microsoft.Extensions.Configuration.Binder/3.0.0-preview6.19304.6": {
         "dependencies": {
           "Microsoft.Extensions.Configuration": "3.0.0-preview6.19304.6"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {}
         }
       },
       "Microsoft.Extensions.DependencyInjection/3.0.0-preview6.19304.6": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "3.0.0-preview6.19304.6"
+        },
+        "compile": {
+          "lib/netcoreapp3.0/Microsoft.Extensions.DependencyInjection.dll": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/3.0.0-preview6.19304.6": {},
+      "Microsoft.Extensions.DependencyInjection.Abstractions/3.0.0-preview6.19304.6": {
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        }
+      },
       "Microsoft.Extensions.FileProviders.Abstractions/2.0.1": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "3.0.0-preview6.19304.6"
@@ -583,28 +604,41 @@
           "Microsoft.Extensions.DependencyInjection": "3.0.0-preview6.19304.6",
           "Microsoft.Extensions.Logging.Abstractions": "3.0.0-preview6.19304.6",
           "Microsoft.Extensions.Options": "3.0.0-preview6.19304.6"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.dll": {}
         }
       },
-      "Microsoft.Extensions.Logging.Abstractions/3.0.0-preview6.19304.6": {},
+      "Microsoft.Extensions.Logging.Abstractions/3.0.0-preview6.19304.6": {
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll": {}
+        }
+      },
       "Microsoft.Extensions.Options/3.0.0-preview6.19304.6": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "3.0.0-preview6.19304.6",
           "Microsoft.Extensions.Primitives": "3.0.0-preview6.19304.6",
           "System.ComponentModel.Annotations": "4.6.0-preview6.19303.8"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.dll": {}
         }
       },
       "Microsoft.Extensions.Primitives/3.0.0-preview6.19304.6": {
         "dependencies": {
           "System.Memory": "4.5.2",
           "System.Runtime.CompilerServices.Unsafe": "4.6.0-preview6.19303.8"
+        },
+        "compile": {
+          "lib/netcoreapp3.0/Microsoft.Extensions.Primitives.dll": {}
         }
       },
-      "Microsoft.NETCore.App/3.0.0-preview7-27912-14": {
+      "Microsoft.NETCore.App/3.0.0-preview6-27804-01": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "3.0.0-preview7.19362.9"
+          "Microsoft.NETCore.Platforms": "3.0.0-preview6.19303.8"
         }
       },
-      "Microsoft.NETCore.Platforms/3.0.0-preview7.19362.9": {},
+      "Microsoft.NETCore.Platforms/3.0.0-preview6.19303.8": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
       "Microsoft.Win32.Registry/4.5.0": {
         "dependencies": {
@@ -684,12 +718,16 @@
       "System.Buffers/4.5.0": {},
       "System.Collections/4.0.11": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "3.0.0-preview7.19362.9",
+          "Microsoft.NETCore.Platforms": "3.0.0-preview6.19303.8",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
       },
-      "System.Collections.Immutable/1.6.0-preview6.19303.8": {},
+      "System.Collections.Immutable/1.6.0-preview6.19303.8": {
+        "compile": {
+          "lib/netstandard2.0/System.Collections.Immutable.dll": {}
+        }
+      },
       "System.ComponentModel.Annotations/4.6.0-preview6.19303.8": {},
       "System.Configuration.ConfigurationManager/4.5.0": {
         "dependencies": {
@@ -705,15 +743,19 @@
       },
       "System.Diagnostics.Debug/4.0.11": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "3.0.0-preview7.19362.9",
+          "Microsoft.NETCore.Platforms": "3.0.0-preview6.19303.8",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
       },
-      "System.Diagnostics.DiagnosticSource/4.6.0-preview6.19303.8": {},
+      "System.Diagnostics.DiagnosticSource/4.6.0-preview6.19303.8": {
+        "compile": {
+          "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
+        }
+      },
       "System.Globalization/4.0.11": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "3.0.0-preview7.19362.9",
+          "Microsoft.NETCore.Platforms": "3.0.0-preview6.19303.8",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
@@ -731,7 +773,7 @@
       },
       "System.IO/4.1.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "3.0.0-preview7.19362.9",
+          "Microsoft.NETCore.Platforms": "3.0.0-preview6.19303.8",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0",
           "System.Text.Encoding": "4.0.11",
@@ -834,7 +876,7 @@
       },
       "System.Reflection/4.1.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "3.0.0-preview7.19362.9",
+          "Microsoft.NETCore.Platforms": "3.0.0-preview6.19303.8",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.IO": "4.1.0",
           "System.Reflection.Primitives": "4.0.1",
@@ -867,7 +909,7 @@
       },
       "System.Reflection.Extensions/4.0.1": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "3.0.0-preview7.19362.9",
+          "Microsoft.NETCore.Platforms": "3.0.0-preview6.19303.8",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Reflection": "4.1.0",
           "System.Runtime": "4.3.0"
@@ -875,7 +917,7 @@
       },
       "System.Reflection.Primitives/4.0.1": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "3.0.0-preview7.19362.9",
+          "Microsoft.NETCore.Platforms": "3.0.0-preview6.19303.8",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
@@ -888,7 +930,7 @@
       },
       "System.Resources.ResourceManager/4.0.1": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "3.0.0-preview7.19362.9",
+          "Microsoft.NETCore.Platforms": "3.0.0-preview6.19303.8",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Globalization": "4.0.11",
           "System.Reflection": "4.1.0",
@@ -897,13 +939,13 @@
       },
       "System.Runtime/4.3.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "3.0.0-preview7.19362.9",
+          "Microsoft.NETCore.Platforms": "3.0.0-preview6.19303.8",
           "Microsoft.NETCore.Targets": "1.1.0"
         }
       },
       "System.Runtime.Caching/4.5.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "3.0.0-preview7.19362.9",
+          "Microsoft.NETCore.Platforms": "3.0.0-preview6.19303.8",
           "System.Configuration.ConfigurationManager": "4.5.0"
         },
         "runtime": {
@@ -927,10 +969,14 @@
           }
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/4.6.0-preview6.19303.8": {},
+      "System.Runtime.CompilerServices.Unsafe/4.6.0-preview6.19303.8": {
+        "compile": {
+          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
       "System.Runtime.Extensions/4.1.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "3.0.0-preview7.19362.9",
+          "Microsoft.NETCore.Platforms": "3.0.0-preview6.19303.8",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
@@ -942,7 +988,7 @@
       },
       "System.Security.AccessControl/4.5.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "3.0.0-preview7.19362.9",
+          "Microsoft.NETCore.Platforms": "3.0.0-preview6.19303.8",
           "System.Security.Principal.Windows": "4.5.0"
         }
       },
@@ -969,20 +1015,34 @@
       },
       "System.Security.Principal.Windows/4.5.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "3.0.0-preview7.19362.9"
+          "Microsoft.NETCore.Platforms": "3.0.0-preview6.19303.8"
         }
       },
       "System.Text.Encoding/4.0.11": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "3.0.0-preview7.19362.9",
+          "Microsoft.NETCore.Platforms": "3.0.0-preview6.19303.8",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
       },
       "System.Text.Encoding.CodePages/4.5.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "3.0.0-preview7.19362.9",
+          "Microsoft.NETCore.Platforms": "3.0.0-preview6.19303.8",
           "System.Runtime.CompilerServices.Unsafe": "4.6.0-preview6.19303.8"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.6.26515.6"
+          }
         }
       },
       "System.Text.Encodings.Web/4.4.0": {},
@@ -994,7 +1054,7 @@
       },
       "System.Threading.Tasks/4.0.11": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "3.0.0-preview7.19362.9",
+          "Microsoft.NETCore.Platforms": "3.0.0-preview6.19303.8",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
@@ -2242,13 +2302,13 @@
         },
         "compileOnly": true
       },
-      "System.Reflection.Emit.ILGeneration.Reference/4.1.0.0": {
+      "System.Reflection.Emit.ILGeneration.Reference/4.0.3.0": {
         "compile": {
           "System.Reflection.Emit.ILGeneration.dll": {}
         },
         "compileOnly": true
       },
-      "System.Reflection.Emit.Lightweight.Reference/4.1.0.0": {
+      "System.Reflection.Emit.Lightweight.Reference/4.0.3.0": {
         "compile": {
           "System.Reflection.Emit.Lightweight.dll": {}
         },
@@ -2485,12 +2545,6 @@
       "System.ServiceProcess/4.0.0.0": {
         "compile": {
           "System.ServiceProcess.dll": {}
-        },
-        "compileOnly": true
-      },
-      "System.Text.Encoding.CodePages.Reference/4.1.2.0": {
-        "compile": {
-          "System.Text.Encoding.CodePages.dll": {}
         },
         "compileOnly": true
       },
@@ -2898,19 +2952,19 @@
       "path": "microsoft.extensions.primitives/3.0.0-preview6.19304.6",
       "hashPath": "microsoft.extensions.primitives.3.0.0-preview6.19304.6.nupkg.sha512"
     },
-    "Microsoft.NETCore.App/3.0.0-preview7-27912-14": {
+    "Microsoft.NETCore.App/3.0.0-preview6-27804-01": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-TNDdHAcfUqEaWXXJoCMUGZnsIP53jlShQV4Ccw8Nqbl8SWkkz1llq4ckfoRl7QrHoq328JhEyCSnPaaYHAB5Xg==",
-      "path": "microsoft.netcore.app/3.0.0-preview7-27912-14",
-      "hashPath": "microsoft.netcore.app.3.0.0-preview7-27912-14.nupkg.sha512"
+      "sha512": "sha512-ZusFeFw4lm4f3W1GyaTDbEdqln8N0fWFijKpykPLLvrEEsppfZwx8n/UeMm/e56QspzGHKpJfmKi4YF2Z6+G6A==",
+      "path": "microsoft.netcore.app/3.0.0-preview6-27804-01",
+      "hashPath": "microsoft.netcore.app.3.0.0-preview6-27804-01.nupkg.sha512"
     },
-    "Microsoft.NETCore.Platforms/3.0.0-preview7.19362.9": {
+    "Microsoft.NETCore.Platforms/3.0.0-preview6.19303.8": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-gc5/X1m73JO8ETxOHC3IbgM7JRa7LPsSY+/lVs88YGwKn0QYuU568EmpC8yPk9UKaAOq+82PWG61vFcXdNfsvQ==",
-      "path": "microsoft.netcore.platforms/3.0.0-preview7.19362.9",
-      "hashPath": "microsoft.netcore.platforms.3.0.0-preview7.19362.9.nupkg.sha512"
+      "sha512": "sha512-9nE9InmtkWL1ZIAvzZPoe8zzr8JNrmyofR5++0NCLomrLSbR70b60hLXFE/7vXIVgbKdTo3CTsCcFTOSZoOIEw==",
+      "path": "microsoft.netcore.platforms/3.0.0-preview6.19303.8",
+      "hashPath": "microsoft.netcore.platforms.3.0.0-preview6.19303.8.nupkg.sha512"
     },
     "Microsoft.NETCore.Targets/1.1.0": {
       "type": "package",
@@ -4290,12 +4344,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Reflection.Emit.ILGeneration.Reference/4.1.0.0": {
+    "System.Reflection.Emit.ILGeneration.Reference/4.0.3.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
     },
-    "System.Reflection.Emit.Lightweight.Reference/4.1.0.0": {
+    "System.Reflection.Emit.Lightweight.Reference/4.0.3.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -4491,11 +4545,6 @@
       "sha512": ""
     },
     "System.ServiceProcess/4.0.0.0": {
-      "type": "referenceassembly",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "System.Text.Encoding.CodePages.Reference/4.1.2.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

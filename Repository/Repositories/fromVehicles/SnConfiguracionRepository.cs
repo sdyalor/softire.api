@@ -6,23 +6,19 @@ using System.Threading.Tasks;
   
 namespace softire.api
 {  
-    public class SnMarcaVehiculoRepository : ISnMarcaVehiculoRepository
+    public class SnConfiguracionRepository : ISnConfiguracionRepository
     {  
         private readonly NeumaticosContext _context;  
-        public SnMarcaVehiculoRepository(NeumaticosContext context)  
+        public SnConfiguracionRepository(NeumaticosContext context)  
         {  
             _context = context;  
         }
 
-        public Task<List<SnMarcaVehiculo>> GetMarcaVehiculoAll()
+        public Task<List<SnConfiguracion>> GetConfiguracionAll()
         {
-            return _context.SnMarcaVehiculo.ToListAsync();
+            return _context.SnConfiguracion.ToListAsync();
         }
 
-        // public Task<List<SnVehiculo>> GetVehiculoAll()
-        // {
-        //     return _context.SnVehiculo.ToListAsync();
-        // }
         // public Task<SnNeumaticosDet> GetNeumaticosDet(string id)  
         // {  
         //     return _context.SnNeumaticosDet.FirstOrDefault(x => x. == id));  

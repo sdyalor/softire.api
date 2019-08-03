@@ -13,15 +13,15 @@ namespace softire.api.Models
         public string Ubicacion { get; set; }
         public string CodDiseno { get; set; }
         public string CodEvento { get; set; }
-        public float? RemanenteProm { get; set; }
-        public float? Kilometraje { get; set; }
-        public float? CostoPromedio { get; set; }
+        public decimal? RemanenteProm { get; set; }
+        public decimal? Kilometraje { get; set; }
+        public decimal? CostoPromedio { get; set; }
         public string Notas { get; set; }
         public string CodProveedor { get; set; }
-        public float? Posicion { get; set; }
-        public float? Costo { get; set; }
-        public float? Horometro { get; set; }
-        public float? Presion { get; set; }
+        public decimal? Posicion { get; set; }
+        public decimal? Costo { get; set; }
+        public decimal? Horometro { get; set; }
+        public decimal? Presion { get; set; }
         public DateTime? Fecha { get; set; }
         public string Usuario { get; set; }
         public int? Rem1 { get; set; }

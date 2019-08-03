@@ -16,6 +16,7 @@ namespace softire.api.Models
         }
 
         public virtual DbSet<SnCiaNeumatico> SnCiaNeumatico { get; set; }
+        public virtual DbSet<SnCondicionesNeumatico> SnCondicionesNeumatico { get; set; }
         public virtual DbSet<SnConfiguracion> SnConfiguracion { get; set; }
         public virtual DbSet<SnDisenosNeumatico> SnDisenosNeumatico { get; set; }
         public virtual DbSet<SnMarcaNeumatico> SnMarcaNeumatico { get; set; }
@@ -83,6 +84,62 @@ namespace softire.api.Models
                     .IsRequired()
                     .HasMaxLength(50)
                     .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<SnCondicionesNeumatico>(entity =>
+            {
+                entity.HasKey(e => new { e.CodCia, e.CodCondicion })
+                    .HasName("PK_SN_Condiciones_Neumatico_1");
+
+                entity.ToTable("SN_Condiciones_Neumatico");
+
+                entity.Property(e => e.CodCia)
+                    .HasColumnName("COD_CIA")
+                    .HasMaxLength(2)
+                    .IsUnicode(false)
+                    .IsFixedLength();
+
+                entity.Property(e => e.CodCondicion)
+                    .HasColumnName("Cod_Condicion")
+                    .HasMaxLength(2)
+                    .IsUnicode(false)
+                    .IsFixedLength();
+
+                entity.Property(e => e.Breve)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Descripcion)
+                    .IsRequired()
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Estado)
+                    .IsRequired()
+                    .HasMaxLength(1)
+                    .IsUnicode(false)
+                    .IsFixedLength()
+                    .HasDefaultValueSql("('A')");
+
+                entity.Property(e => e.Fecha)
+                    .HasColumnType("datetime")
+                    .HasDefaultValueSql("(getdate())");
+
+                entity.Property(e => e.Notas)
+                    .HasMaxLength(500)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Usuario)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
+                entity.HasOne(d => d.CodCiaNavigation)
+                    .WithMany(p => p.SnCondicionesNeumatico)
+                    .HasForeignKey(d => d.CodCia)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_SN_Condiciones_Neumatico_SN_Cia_Neumatico");
             });
 
             modelBuilder.Entity<SnConfiguracion>(entity =>
