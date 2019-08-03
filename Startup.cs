@@ -38,13 +38,23 @@ namespace softire.api
             }));
             services.AddControllers();
             services.AddDbContext<NeumaticosContext>();
-            services.AddScoped<ISnNeumaticosDetRepository, SnNeumaticosDetRepository>();  
+            /* Dependency injection for Types */
+            /* fromVehicles */
             services.AddScoped<ISnVehiculoRepository, SnVehiculoRepository>();  
             services.AddScoped<ISnMarcaVehiculoRepository, SnMarcaVehiculoRepository>();  
             services.AddScoped<ISnModeloVehiculoRepository, SnModeloVehiculoRepository>();  
             services.AddScoped<ISnTipoVehiculoRepository, SnTipoVehiculoRepository>();  
             services.AddScoped<ISnConfiguracionRepository, SnConfiguracionRepository>();  
+            /* fromTires */
             services.AddScoped<ISnNeumaticosRepository, SnNeumaticosRepository>();  
+            services.AddScoped<ISnCondicionesNeumaticoRepository, SnCondicionesNeumaticoRepository>();
+            services.AddScoped<ISnDisenosNeumaticoRepository, SnDisenosNeumaticoRepository>();
+            services.AddScoped<ISnMarcaNeumaticoRepository, SnMarcaNeumaticoRepository>();
+            services.AddScoped<ISnMedidaNeumaticoRepository, SnMedidaNeumaticoRepository>();
+            services.AddScoped<ISnModeloNeumaticoRepository, SnModeloNeumaticoRepository>();
+            /*others */
+            services.AddScoped<ISnNeumaticosDetRepository, SnNeumaticosDetRepository>();  
+            services.AddScoped<ISnProveedoresRepository, SnProveedoresRepository>();
             //GraphQL configuration  
             services.AddScoped<IDependencyResolver>(s => new FuncDependencyResolver(s.GetRequiredService));  
             services.AddScoped<SnNeumaticosDetSchema>();  
