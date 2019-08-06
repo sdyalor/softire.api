@@ -21,34 +21,34 @@ namespace softire.api
             )  
         //snNeumaticosDetR.. ??
         {  
-            Field<ListGraphType<SnNeumaticosDetType>>(
-                "neumatico",
-                arguments: new QueryArguments(
-                    new QueryArgument<IdGraphType> { Name = "id"}
-                ),
-                resolve: context => 
-                         {
-                             var id = context.GetArgument<string>("id");
-                             return  snNeumaticosDetRepository.GetNeumaticosDetAll();
-                         }
-            );
-            Field<SnNeumaticosDetType>(
-                "snneumatico",
-                arguments: new QueryArguments(
-                    new QueryArgument<NonNullGraphType<IdGraphType>>
-                    {
-                        Name = "id"
-                    }
-                ),
-                resolve: context =>
-                {
-                    var id = context.GetArgument<string>("id");
-                    return snNeumaticosDetRepository.GetNeumaticosDetById(id);
-                }
-            );
+            // Field<ListGraphType<SnNeumaticosDetType>>(
+            //     "neumatico",
+            //     arguments: new QueryArguments(
+            //         new QueryArgument<IdGraphType> { Name = "id"}
+            //     ),
+            //     resolve: context => 
+            //              {
+            //                  var id = context.GetArgument<string>("id");
+            //                  return  snNeumaticosDetRepository.GetNeumaticosDetAll();
+            //              }
+            // );
+            // Field<SnNeumaticosDetType>(
+            //     "snneumatico",
+            //     arguments: new QueryArguments(
+            //         new QueryArgument<NonNullGraphType<IdGraphType>>
+            //         {
+            //             Name = "id"
+            //         }
+            //     ),
+            //     resolve: context =>
+            //     {
+            //         var id = context.GetArgument<string>("id");
+            //         return snNeumaticosDetRepository.GetNeumaticosDetById(id);
+            //     }
+            // );
             /* fromVehicles */
             Field<ListGraphType<SnVehiculoType>>(
-                "vehiculoVehiculo",
+                "vehiculo",
                 resolve: context => snVehiculoRepository.GetVehiculoAll()
             );
             Field<ListGraphType<SnMarcaVehiculoType>>(
