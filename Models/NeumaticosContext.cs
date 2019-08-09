@@ -37,7 +37,7 @@ namespace softire.api.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=sqlcmd.c5hj5b0jux9f.us-east-1.rds.amazonaws.com;Database=Neumaticos;User id=sdyalor;Password=15362486957");
+                optionsBuilder.UseSqlServer("Server=sqlcmd.c5hj5b0jux9f.us-east-1.rds.amazonaws.com;Database=neumaticos2;User id=sdyalor;Password=15362486957");
             }
         }
 

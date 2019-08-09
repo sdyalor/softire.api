@@ -101,6 +101,32 @@ namespace softire.api
                 "snneumaticosdet",
                 resolve: context => snNeumaticosDetRepository.GetNeumaticosDetAll() 
                 );
+            // Field<SnModeloNeumaticoType>(  
+            //     "modeloNeumaticoByID",
+            //     arguments: new QueryArguments(new QueryArgument<NonNullGraphType<StringGraphType>>{Name = "id"}),
+            //     resolve: context =>
+            //     {
+            //         var codModelo = context.GetArgument<string>("id");
+            //         return snModeloNeumaticoRepository.GetModeloNeumaticoById(codModelo);
+            //     }
+            //     );
+            Field<ListGraphType<SnNeumaticosDetType>>(
+                "snNeumaticosDetsById",
+                arguments: new QueryArguments(
+                    new QueryArgument<NonNullGraphType<IdGraphType>>{Name = "id"},
+                    new QueryArgument<IdGraphType>{Name = "condicion"}
+                    ),
+                resolve: context =>
+                {
+                    var codNeumatico = context.GetArgument<string>("id");
+                    var codcondicion = context.GetArgument<string>("condicion");
+                    if(codcondicion != null){
+                        return snNeumaticosDetRepository.GetNeumaticosDetsById(codNeumatico,codcondicion);
+                    } else {
+                        return snNeumaticosDetRepository.GetNeumaticosDetsById(codNeumatico);
+                    }
+                }
+            );
         }  
     }  
 }  

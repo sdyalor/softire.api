@@ -7,6 +7,6 @@ namespace softire.api
     public interface ISnModeloNeumaticoRepository  
     {  
         Task<List<SnModeloNeumatico>> GetModeloNeumaticoAll();  
-        // Task<SnNeumaticosDet> GetNeumaticosDetById(string id);
+        Task<SnModeloNeumatico> GetModeloNeumaticoById(string codModelo);
     }  
 }

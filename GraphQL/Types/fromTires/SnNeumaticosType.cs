@@ -1,3 +1,4 @@
+using System;
 using GraphQL.Types;
 using softire.api.Models;
 
@@ -5,19 +6,23 @@ namespace softire.api
 {  
     public class SnNeumaticosType : ObjectGraphType<SnNeumaticos>  
     {  
-        public SnNeumaticosType()  
+        public SnNeumaticosType(ISnModeloNeumaticoRepository snModeloNeumaticoRepository)  
         {
         Field(a =>a.CodCia);
         Field(a =>a.CodObra);
+        // Field<ListGraphType<SnModeloNeumaticoType>>(
+        //     "modeloType",
+        //     resolve: context => snModeloNeumaticoRepository.GetModeloNeumaticoListById(context.Source.CodModelo)
+        // );
         Field(a =>a.CodNeumatico);
         Field(a =>a.DotSerie,nullable:true);
         Field(a =>a.CodProveedor);
         Field(a =>a.FechaCompra,nullable:true);
-        Field(a =>a.NroDocu);
+        Field(a =>a.NroDocu,nullable:true);
         Field(a =>a.NroRequ);
         Field(a =>a.CodMarca);
         Field(a =>a.CodMedida);
-        Field(a =>a.CodModelo);
+        Field(a =>a.CodModelo,nullable:true);
         Field(a =>a.CodDiseno);
         Field(a =>a.RemanenteIni);
         Field(a =>a.RemanenteProm,nullable:true);
@@ -41,6 +46,6 @@ namespace softire.api
         Field(a =>a.Idcarga);
         Field(a =>a.Linecarga,nullable:true);
         Field(a =>a.RemanenteInicial,nullable:true);
-        }  
+        }
     }  
 } 

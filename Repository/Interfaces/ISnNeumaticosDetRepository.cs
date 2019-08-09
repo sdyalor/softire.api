@@ -8,5 +8,6 @@ namespace softire.api
     {  
         Task<List<SnNeumaticosDet>> GetNeumaticosDetAll();  
         Task<SnNeumaticosDet> GetNeumaticosDetById(string id);
+        Task<List<SnNeumaticosDet>> GetNeumaticosDetsById(string codNeumatico, string condicion = "");
     }  
 }

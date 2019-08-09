@@ -20,13 +20,14 @@ namespace softire.api
         }
 
 
-        // public Task<SnNeumaticosDet> GetNeumaticosDet(string id)  
-        // {  
-        //     return _context.SnNeumaticosDet.FirstOrDefault(x => x. == id));  
-        // }  
-        // public Task<SnNeumaticosDet> GetNeumaticosDetById(string id)
+        Task<SnModeloNeumatico> ISnModeloNeumaticoRepository.GetModeloNeumaticoById(string codModelo)
+        {
+            return _context.SnModeloNeumatico.SingleAsync(a => a.CodModelo == codModelo);
+        }
+        // Task<List<SnModeloNeumatico>> ISnModeloNeumaticoRepository.GetModeloNeumaticoListById(string codModelo)
         // {
-        //     return _context.SnNeumaticosDet.SingleAsync(x => x.CodNeumatico == id);
+        //     return _context.SnModeloNeumatico.Where(a => a.SnNeumaticos == codModelo).ToListAsync();
         // }
+
     }  
 }
