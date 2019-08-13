@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/ubuntu/softire.api/softire.api.csproj": {}
+    "/home/ubuntu/testapi2/softire.api/softire.api.csproj": {}
   },
   "projects": {
-    "/home/ubuntu/softire.api/softire.api.csproj": {
+    "/home/ubuntu/testapi2/softire.api/softire.api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/ubuntu/softire.api/softire.api.csproj",
+        "projectUniqueName": "/home/ubuntu/testapi2/softire.api/softire.api.csproj",
         "projectName": "softire.api",
-        "projectPath": "/home/ubuntu/softire.api/softire.api.csproj",
+        "projectPath": "/home/ubuntu/testapi2/softire.api/softire.api.csproj",
         "packagesPath": "/home/ubuntu/.nuget/packages/",
-        "outputPath": "/home/ubuntu/softire.api/obj/",
+        "outputPath": "/home/ubuntu/testapi2/softire.api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/ubuntu/.nuget/NuGet/NuGet.Config"
@@ -38,7 +38,7 @@
           "dependencies": {
             "GraphQL": {
               "target": "Package",
-              "version": "[3.0.0-preview*, )"
+              "version": "[3.0.0-preview-1175, )"
             },
             "GraphQL.Server.Transports.AspnetCore": {
               "target": "Package",
