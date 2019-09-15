@@ -17,7 +17,8 @@ namespace softire.api
             ISnMedidaNeumaticoRepository snMedidaNeumaticoRepository,
             ISnModeloNeumaticoRepository snModeloNeumaticoRepository,
             ISnProveedoresRepository snProveedoresRepository,
-            ISnNeumaticosDetRepository snNeumaticosDetRepository
+            ISnNeumaticosDetRepository snNeumaticosDetRepository,
+            ITiresDetRepository tiresDetRepository
             )  
         //snNeumaticosDetR.. ??
         {  
@@ -126,6 +127,10 @@ namespace softire.api
                         return snNeumaticosDetRepository.GetNeumaticosDetsById(codNeumatico);
                     }
                 }
+            );
+            Field<ListGraphType<TiresDetType>>(
+                "tiresDetType",
+                resolve: context => tiresDetRepository.GetTiresDetAll()
             );
         }  
     }  

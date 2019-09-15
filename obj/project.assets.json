@@ -395,13 +395,7 @@
           "lib/netcoreapp3.0/Microsoft.Extensions.Primitives.dll": {}
         }
       },
-      "Microsoft.NETCore.App/3.0.0-preview6-27804-01": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.NETCore.Platforms": "3.0.0-preview6.19303.8"
-        }
-      },
-      "Microsoft.NETCore.Platforms/3.0.0-preview6.19303.8": {
+      "Microsoft.NETCore.Platforms/2.0.0": {
         "type": "package",
         "compile": {
           "lib/netstandard1.0/_._": {}
@@ -1510,30 +1504,17 @@
         "microsoft.extensions.primitives.nuspec"
       ]
     },
-    "Microsoft.NETCore.App/3.0.0-preview6-27804-01": {
-      "sha512": "ZusFeFw4lm4f3W1GyaTDbEdqln8N0fWFijKpykPLLvrEEsppfZwx8n/UeMm/e56QspzGHKpJfmKi4YF2Z6+G6A==",
+    "Microsoft.NETCore.Platforms/2.0.0": {
+      "sha512": "VdLJOCXhZaEMY7Hm2GKiULmn7IEPFE4XC5LPSfBVCUIA8YLZVh846gtfBJalsPQF2PlzdD7ecX7DZEulJ402ZQ==",
       "type": "package",
-      "path": "microsoft.netcore.app/3.0.0-preview6-27804-01",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "microsoft.netcore.app.3.0.0-preview6-27804-01.nupkg.sha512",
-        "microsoft.netcore.app.nuspec"
-      ]
-    },
-    "Microsoft.NETCore.Platforms/3.0.0-preview6.19303.8": {
-      "sha512": "9nE9InmtkWL1ZIAvzZPoe8zzr8JNrmyofR5++0NCLomrLSbR70b60hLXFE/7vXIVgbKdTo3CTsCcFTOSZoOIEw==",
-      "type": "package",
-      "path": "microsoft.netcore.platforms/3.0.0-preview6.19303.8",
+      "path": "microsoft.netcore.platforms/2.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/netstandard1.0/_._",
-        "microsoft.netcore.platforms.3.0.0-preview6.19303.8.nupkg.sha512",
+        "microsoft.netcore.platforms.2.0.0.nupkg.sha512",
         "microsoft.netcore.platforms.nuspec",
         "runtime.json",
         "useSharedDesignerContext.txt",
@@ -3727,24 +3708,23 @@
       "GraphQL.Server.Transports.AspnetCore >= 3.5.0-alpha0014",
       "GraphQL.Server.UI.Playground >= 3.5.0-alpha0014",
       "Microsoft.EntityFrameworkCore.Design >= 3.0.0-preview6*",
-      "Microsoft.EntityFrameworkCore.SqlServer >= 3.0.0-preview6*",
-      "Microsoft.NETCore.App >= 3.0.0-preview6-27804-01"
+      "Microsoft.EntityFrameworkCore.SqlServer >= 3.0.0-preview6*"
     ]
   },
   "packageFolders": {
-    "/home/ubuntu/.nuget/packages/": {}
+    "/home/sdyalor/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/ubuntu/testapi2/softire.api/softire.api.csproj",
+      "projectUniqueName": "/home/sdyalor/softire.api/softire.api.csproj",
       "projectName": "softire.api",
-      "projectPath": "/home/ubuntu/testapi2/softire.api/softire.api.csproj",
-      "packagesPath": "/home/ubuntu/.nuget/packages/",
-      "outputPath": "/home/ubuntu/testapi2/softire.api/obj/",
+      "projectPath": "/home/sdyalor/softire.api/softire.api.csproj",
+      "packagesPath": "/home/sdyalor/.nuget/packages/",
+      "outputPath": "/home/sdyalor/softire.api/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/ubuntu/.nuget/NuGet/NuGet.Config"
+        "/home/sdyalor/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"
@@ -3787,13 +3767,6 @@
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "[3.0.0-preview6*, )"
-          },
-          "Microsoft.NETCore.App": {
-            "include": "None",
-            "suppressParent": "All",
-            "target": "Package",
-            "version": "[3.0.0-preview6-27804-01, )",
-            "autoReferenced": true
           }
         },
         "imports": [
@@ -3813,7 +3786,8 @@
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
-        }
+        },
+        "runtimeIdentifierGraphPath": "/home/sdyalor/dotnet/sdk/3.0.100-preview9-014004/RuntimeIdentifierGraph.json"
       }
     }
   }

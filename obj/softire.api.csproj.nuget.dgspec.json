@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/ubuntu/testapi2/softire.api/softire.api.csproj": {}
+    "/home/sdyalor/softire.api/softire.api.csproj": {}
   },
   "projects": {
-    "/home/ubuntu/testapi2/softire.api/softire.api.csproj": {
+    "/home/sdyalor/softire.api/softire.api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/ubuntu/testapi2/softire.api/softire.api.csproj",
+        "projectUniqueName": "/home/sdyalor/softire.api/softire.api.csproj",
         "projectName": "softire.api",
-        "projectPath": "/home/ubuntu/testapi2/softire.api/softire.api.csproj",
-        "packagesPath": "/home/ubuntu/.nuget/packages/",
-        "outputPath": "/home/ubuntu/testapi2/softire.api/obj/",
+        "projectPath": "/home/sdyalor/softire.api/softire.api.csproj",
+        "packagesPath": "/home/sdyalor/.nuget/packages/",
+        "outputPath": "/home/sdyalor/softire.api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/ubuntu/.nuget/NuGet/NuGet.Config"
+          "/home/sdyalor/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
@@ -57,13 +57,6 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[3.0.0-preview6*, )"
-            },
-            "Microsoft.NETCore.App": {
-              "include": "None",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[3.0.0-preview6-27804-01, )",
-              "autoReferenced": true
             }
           },
           "imports": [
@@ -83,7 +76,8 @@
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
-          }
+          },
+          "runtimeIdentifierGraphPath": "/home/sdyalor/dotnet/sdk/3.0.100-preview9-014004/RuntimeIdentifierGraph.json"
         }
       }
     }
