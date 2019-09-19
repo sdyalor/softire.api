@@ -3712,19 +3712,19 @@
     ]
   },
   "packageFolders": {
-    "/home/sdyalor/.nuget/packages/": {}
+    "/root/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/sdyalor/softire.api/softire.api.csproj",
+      "projectUniqueName": "/home/ubuntu/softire.api/softire.api.csproj",
       "projectName": "softire.api",
-      "projectPath": "/home/sdyalor/softire.api/softire.api.csproj",
-      "packagesPath": "/home/sdyalor/.nuget/packages/",
-      "outputPath": "/home/sdyalor/softire.api/obj/",
+      "projectPath": "/home/ubuntu/softire.api/softire.api.csproj",
+      "packagesPath": "/root/.nuget/packages/",
+      "outputPath": "/home/ubuntu/softire.api/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/sdyalor/.nuget/NuGet/NuGet.Config"
+        "/root/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"
@@ -3787,7 +3787,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/home/sdyalor/dotnet/sdk/3.0.100-preview9-014004/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/home/ubuntu/dotnet/sdk/3.0.100-preview9-014004/RuntimeIdentifierGraph.json"
       }
     }
   }

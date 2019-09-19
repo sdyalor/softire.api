@@ -12,8 +12,8 @@ namespace softire.api
         public TiresDetRepository(NeumaticosContext context)  
         {  
             _context = context;  
-        }  
-  
+        }
+        
         public Task<List<TiresDet>> GetTiresDetAll()
         {
             var tiresDet = new List<TiresDet>();

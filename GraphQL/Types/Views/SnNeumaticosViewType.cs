@@ -4,26 +4,27 @@ using softire.api.Models;
 
 namespace softire.api
 {  
-    public class SnNeumaticosType : ObjectGraphType<SnNeumaticos>  
+    public class SnNeumaticosViewType : ObjectGraphType<SnNeumaticosView>  
     {  
-        public SnNeumaticosType(ISnDisenosNeumaticoRepository snDisenosNeumaticoRepository)  
+        public SnNeumaticosViewType(ISnModeloNeumaticoRepository snModeloNeumaticoRepository)  
         {
         Field(a =>a.CodCia);
         Field(a =>a.CodObra);
-        // Field<ListGraphType<SnModeloNeumaticoType>>(
-        //     "modeloType",
-        //     resolve: context => snModeloNeumaticoRepository.GetModeloNeumaticoListById(context.Source.CodModelo)
-        // );
         Field(a =>a.CodNeumatico);
         Field(a =>a.DotSerie,nullable:true);
         Field(a =>a.CodProveedor);
+        Field(a =>a.CodProveedorDescripcion);
         Field(a =>a.FechaCompra,nullable:true);
         Field(a =>a.NroDocu,nullable:true);
         Field(a =>a.NroRequ);
         Field(a =>a.CodMarca);
+        Field(a =>a.CodMarcaDescripcion);
         Field(a =>a.CodMedida);
+        Field(a =>a.CodMedidaDescripcion);
         Field(a =>a.CodModelo,nullable:true);
+        Field(a =>a.CodModeloDescripcion,nullable:true);
         Field(a =>a.CodDiseno);
+        Field(a =>a.CodDisenoDescripcion);
         Field(a =>a.RemanenteIni);
         Field(a =>a.RemanenteProm,nullable:true);
         Field(a =>a.RemanenteMinima,nullable:true);
@@ -34,6 +35,7 @@ namespace softire.api
         Field(a =>a.TapaValvula);
         Field(a =>a.ExtencionValvula);
         Field(a =>a.Estado);
+        Field(a =>a.EstadoDescripcion);
         Field(a =>a.Fecha,nullable:true);
         Field(a =>a.Usuario);
         Field(a =>a.NroPlieges,nullable:true);
@@ -46,19 +48,6 @@ namespace softire.api
         Field(a =>a.Idcarga);
         Field(a =>a.Linecarga,nullable:true);
         Field(a =>a.RemanenteInicial,nullable:true);
-        Field<ListGraphType<SnDisenosNeumaticoType>>(
-            "disenioDet",
-            resolve: context => {
-                var disenios = snDisenosNeumaticoRepository.GetDisenoNeumaticoById(context.Source.CodDiseno.ToString()).Result;
-                return disenios;
-            }
-        );
-        // Field(a =>a.Cod,false,typeof(SnDisenosNeumaticoType)).Resolve(ResolveCod);
-        }
-        private SnDisenosNeumatico ResolveCod(ResolveFieldContext<SnNeumaticos> context)
-        {
-            var snNeumatico = context.Source;
-            return snNeumatico.Cod;
         }
     }  
 } 

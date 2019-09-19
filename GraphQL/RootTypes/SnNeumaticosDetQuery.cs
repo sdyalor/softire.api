@@ -18,7 +18,8 @@ namespace softire.api
             ISnModeloNeumaticoRepository snModeloNeumaticoRepository,
             ISnProveedoresRepository snProveedoresRepository,
             ISnNeumaticosDetRepository snNeumaticosDetRepository,
-            ITiresDetRepository tiresDetRepository
+            ITiresDetRepository tiresDetRepository,
+            ISnNeumaticosViewRepository snNeumaticosViewRepository
             )  
         //snNeumaticosDetR.. ??
         {  
@@ -131,6 +132,10 @@ namespace softire.api
             Field<ListGraphType<TiresDetType>>(
                 "tiresDetType",
                 resolve: context => tiresDetRepository.GetTiresDetAll()
+            );
+            Field<ListGraphType<SnNeumaticosViewType>>(
+                "snNeumaticosViewType",
+                resolve: context => snNeumaticosViewRepository.GetNeumaticosViewAll()
             );
         }  
     }  
